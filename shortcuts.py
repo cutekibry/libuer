@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 
-
 import csv
+
+
+from spider import get_accepted_problems
+from format import format_into_table
+from config import MAX_PAGE, DEBUG
 
 
 def read_file(file, encoding='utf-8'):
@@ -22,3 +26,8 @@ def write_csv(file, table, encoding='utf-8'):
 	writer = csv.writer(f)
 	writer.writerows(table)
 	f.close()
+	
+
+def write_accepted_csv(file, user, max_page=MAX_PAGE, debug=DEBUG):
+	data = get_accepted_problems(user, max_page, debug)
+	write_csv(file, format_into_table(data))

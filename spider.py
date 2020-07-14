@@ -5,12 +5,10 @@ import requests
 import json
 
 from format import format_accepted_problems
+from config import BASE_URL, MAX_PAGE, DEBUG
 
 
-BASE_URL = 'https://loj.ac'
-
-
-def get_submissions(params, max_page=50, LOG=False):
+def get_submissions(params, max_page=MAX_PAGE, debug=DEBUG):
 	"""
 	params:
 	problem_id
@@ -26,10 +24,10 @@ def get_submissions(params, max_page=50, LOG=False):
 
 	submissions = []
 
-	r = requests.get(base_url + '/submissions', params=params)
+	r = requests.get(BASE_URL + '/submissions', params=params)
 	for i in range(max_page):
-		if LOG:
-			print('# crawl: #%d: %s', % (i + 1, r.url))
+		if debug:
+			print('# crawl: #%d: %s' % (i + 1, r.url))
 
 		soup = bs4.BeautifulSoup(r.text, 'lxml')
 		
@@ -42,18 +40,18 @@ def get_submissions(params, max_page=50, LOG=False):
 		nextpage = soup.find(attrs={'id': 'page_next'})
 		
 		if nextpage and 'href' in nextpage.attrs:
-			r = requests.get(base_url + nextpage.attrs['href'])
+			r = requests.get(BASE_URL + nextpage.attrs['href'])
 		else:
-			if LOG:
+			if debug:
 				print('# crawl: no page_next detected, break')
 			break 
 	
-	if LOG:
+	if debug:
 		print('# crawl: finish')
 	
 	return submissions
 	
 
-def get_accepted_problems(user, max_page=50, LOG=False):	
-	submissions = get_submissions({'submitter': user, 'status': 'Accepted'}, max_page, LOG)
+def get_accepted_problems(user, max_page=MAX_PAGE, debug=DEBUG):	
+	submissions = get_submissions({'submitter': user, 'status': 'Accepted'}, max_page, debug)
 	return format_accepted_problems(submissions)
