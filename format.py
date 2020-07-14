@@ -17,7 +17,21 @@ def lenformat(n):
 		return '%.1f K' % (n / 1024)
 
 
-def format(data):
+def format_accepted_problems(submissions):
+	problems = []
+	idset = set()
+	
+	for x in submissions[::-1]:
+		problem_id = x['info']['problemId']
+		
+		if problem_id not in idset:
+			idset.add(problem_id)
+			problems.append(x)
+	
+	return problems[::-1]
+
+
+def format_into_table(data):
 	res = [HEADERS]
 	
 	for x in data:

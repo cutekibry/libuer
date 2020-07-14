@@ -4,6 +4,8 @@ import bs4
 import requests
 import json
 
+from format import format_accepted_problems
+
 
 BASE_URL = 'https://loj.ac'
 
@@ -22,7 +24,7 @@ def get_submissions(params, max_page=50, LOG=False):
 	page
 	"""
 
-	total = []
+	submissions = []
 
 	r = requests.get(base_url + '/submissions', params=params)
 	for i in range(max_page):
@@ -35,7 +37,7 @@ def get_submissions(params, max_page=50, LOG=False):
 		code = table.contents[0]
 		code = code[code.find('itemList'):]
 		code = code[code.find('['):code.find(';')]
-		total += json.loads(code)
+		submissions += json.loads(code)
 		
 		nextpage = soup.find(attrs={'id': 'page_next'})
 		
@@ -49,4 +51,9 @@ def get_submissions(params, max_page=50, LOG=False):
 	if LOG:
 		print('# crawl: finish')
 	
-	return total
+	return submissions
+	
+
+def get_accepted_problems(user, max_page=50, LOG=False):	
+	submissions = get_submissions({'submitter': user, 'status': 'Accepted'}, max_page, LOG)
+	return format_accepted_problems(submissions)
