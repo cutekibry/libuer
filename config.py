@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
-
-BASE_URL = 'https://loj.ac'
-MAX_PAGE = 200
+BASEURL = 'https://loj.ac'
 DEBUG = True
+NEWONLY = True
+
+COMMIT_BEFORE_EXIT = True
+
+EXIT_WHEN_EXCEPTION = False

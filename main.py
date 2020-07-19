@@ -1,31 +1,83 @@
 #!/usr/bin/python3
 
+from pprint import pprint
 
-from shortcuts import write_accepted_csv
+import database
+import format
+from config import COMMIT_BEFORE_EXIT, EXIT_WHEN_EXCEPTION
+from shortcuts import *
 
-from pathlib import Path
-
-
-data_dir = Path('data')
-
-if data_dir.is_file():
-	print('ERROR: "data" is a file instead of a directory.')
-	print('Please move the file somewhere else.')
-	print('Aborted.')
-	exit(0)
-elif not data_dir.exists():
-	data.mkdir()
+database.init()
 
 
-print('This program will crawl all the accepted problems of the user you specified,')
-print('and then output the submissions into "data/{username}.csv".')
-print('For the same problem, this program will only store the oldest accepted submission.')
-print('-' * 32)
+HELP = '''
+dua username        Output user's accepted submissions into 'outputs/{username}.csv' in SYZOJ style
+                    Only keep the oldest submission for the same problem
+duaa                Run `dua {user}` for all users in the database
+exec command        Run `exec(command)` in Python
+exit                Exit the program
+help                Show the help text
+query [params]      Query in the database and print the results
+ua username         Crawl user's accepted submissions from the site and store them into the database
+uaa                 Run `ua {user}` for all users in the database
+users               Print all users in the database
+'''.strip()
 
-username = input('Please input the username: ')
-print('The username is "%s".' % username)
-if input('Confirm? [y/N] ').lower() != 'y':
-	print('Aborted.')
-	exit(0)
+# update [params]     Crawl specified submissions from the site and store them into the database
 
-write_accepted_csv('data/%s.csv' % username, username)
+
+print('''
+Libuer version 0.1a 2020-07-19 11:14:07
+
+'''.strip())
+
+command = ''
+while True:
+    if not command:
+        s = input('libuer> ')
+    else:
+        s = input('   ...> ')
+
+    if s and s[-1] == '\\':
+        command += s[:-1]
+        continue
+
+    command += s
+    command = command.strip()
+
+    try:
+        if command.find(' ') != -1:
+            params = command[command.find(' '):].strip()
+        else:
+            params = ''
+
+        if command.find('dua') == 0:
+            dumpuserac(params)
+        elif command.find('duaa') == 0:
+            dumpalluserac()
+        elif command.find('exec') == 0:
+            exec(command)
+        elif command.find('exit') == 0:
+            if COMMIT_BEFORE_EXIT:
+                database.commit()
+            print('# Have a nice day')
+            exit(0)
+        elif command.find('help') == 0:
+            print(HELP)
+        elif command.find('query') == 0:
+            print(query(params))
+        elif command.find('ua') == 0:
+            upuserac(params)
+        elif command.find('uaa') == 0:
+            upalluserac()
+        elif command.find('users') == 0:
+            print(' '.join(sorted(queryusers())))
+        else:
+            print('! Unknown command')
+        
+    except Exception as e:
+        if EXIT_WHEN_EXCEPTION:
+            raise e
+        else:
+            print('!', type(e), e.args[0])
+    command = ''
