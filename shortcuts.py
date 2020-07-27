@@ -39,6 +39,8 @@ def upcrawl(params, baseurl=BASEURL, newonly=NEWONLY, debug=DEBUG):
 
 
 def upuserac(user, baseurl=BASEURL, newonly=NEWONLY, debug=DEBUG):
+    if not user:
+        raise ValueError('Username is void')
     res = crawl.crawluserac(user, baseurl, newonly, debug)
     database.update(res)
     database.commit()
@@ -50,7 +52,11 @@ def upalluserac(baseurl=BASEURL, newonly=NEWONLY, debug=DEBUG):
 
 
 def dumpuserac(user, file=None, syzoj=True):
+    if not user:
+        raise ValueError('Username is void')
+
     data = format.unique(database.query('user="%s"' % user))
+    data = sorted(data, key=lambda x: x[7], reverse=True)
 
     if file is None:
         file = 'outputs/%s.csv' % user

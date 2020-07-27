@@ -27,8 +27,7 @@ users               Print all users in the database
 
 
 print('''
-Libuer version 0.1a 2020-07-19 11:14:07
-
+Libuer version 0.2a 2020-07-26 14:48:44
 '''.strip())
 
 command = ''
@@ -51,12 +50,12 @@ while True:
         else:
             params = ''
 
-        if command.find('dua') == 0:
-            dumpuserac(params)
-        elif command.find('duaa') == 0:
+        if command.find('duaa') == 0:
             dumpalluserac()
+        elif command.find('dua') == 0:
+            dumpuserac(params)
         elif command.find('exec') == 0:
-            exec(command)
+            exec(params)
         elif command.find('exit') == 0:
             if COMMIT_BEFORE_EXIT:
                 database.commit()
@@ -66,10 +65,10 @@ while True:
             print(HELP)
         elif command.find('query') == 0:
             print(query(params))
-        elif command.find('ua') == 0:
-            upuserac(params)
         elif command.find('uaa') == 0:
             upalluserac()
+        elif command.find('ua') == 0:
+            upuserac(params)
         elif command.find('users') == 0:
             print(' '.join(sorted(queryusers())))
         else:

@@ -45,11 +45,15 @@ def update(submissions):
             );''' % tuple(dict2list(x)))
 
 
+COMMITED_CHANGES = 0
 def commit():
+    global COMMITED_CHANGES
+
     print('# Commiting changes into database...')
     db.commit()
     print('# Commiting finished.')
-    print('# Total changes:', db.total_changes)
+    print('# Total changes:', db.total_changes - COMMITED_CHANGES)
+    COMMITED_CHANGES = db.total_changes
 
 
 def query(params=''):

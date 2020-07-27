@@ -74,6 +74,10 @@ def crawl(params, baseurl=BASEURL, newonly=NEWONLY, debug=DEBUG):
             # For language is None
             if y['language'] is None:
                 y['language'] = ''
+            # Format time
+            if len(y['submitTime']) == len('2018-09-15 9:50:56'):
+                y['submitTime'] = y['submitTime'][:11] + \
+                    '0' + y['submitTime'][11:]
 
             if queryitem(y):
                 if flag:
