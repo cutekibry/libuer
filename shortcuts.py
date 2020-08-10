@@ -32,17 +32,20 @@ def queryusers():
     return list(res)
 
 
-def upcrawl(params, baseurl=BASEURL, newonly=NEWONLY, debug=DEBUG):
-    res = crawl.crawl(params, baseurl, newonly, debug)
-    database.update(res)
-    database.commit()
+# def upcrawl(params, baseurl=BASEURL, newonly=NEWONLY, debug=DEBUG):
+#     res = crawl.crawl(params, baseurl, newonly, debug)
+#     database.updates(res)
+#     database.commit()
 
 
 def upuserac(user, baseurl=BASEURL, newonly=NEWONLY, debug=DEBUG):
     if not user:
         raise ValueError('Username is void')
     res = crawl.crawluserac(user, baseurl, newonly, debug)
-    database.update(res)
+    res = format.unique(res)
+    for each in res:
+        if not database.query("user=\"%s\" AND problemId=%d AND result=\"Accepted\"" % (each['user'], each['problemId'])):
+            database.update(each)
     database.commit()
 
 

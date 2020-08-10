@@ -11,23 +11,25 @@ database.init()
 
 
 HELP = '''
-dua username        Output user's accepted submissions into 'outputs/{username}.csv' in SYZOJ style
-                    Only keep the oldest submission for the same problem
-duaa                Run `dua {user}` for all users in the database
-exec command        Run `exec(command)` in Python
-exit                Exit the program
-help                Show the help text
-query [params]      Query in the database and print the results
-ua username         Crawl user's accepted submissions from the site and store them into the database
-uaa                 Run `ua {user}` for all users in the database
-users               Print all users in the database
+dua user1 [user2] [...] Output user's accepted submissions into 'outputs/{username}.csv' in SYZOJ style
+                        Only keep the oldest submission for the same problem
+duaa                    Run `dua {user}` for all users in the database
+exec command            Run `exec(command)` in Python
+                        Not recommend to use it if not necessary
+exit                    Exit the program
+help                    Show the help text
+query [params]          Query in the database and print the results
+ua user1 [user2] [...]  Crawl user's accepted submissions from the site and store them into the database
+uaa                     Run `ua {user}` for all users in the database
+users                   Print all users in the database
 '''.strip()
 
 # update [params]     Crawl specified submissions from the site and store them into the database
 
 
 print('''
-Libuer version 0.2a 2020-07-26 14:48:44
+Libuer version 0.3a 2020-08-10 05:53:27
+Run `help` to show the help text
 '''.strip())
 
 command = ''
@@ -53,7 +55,8 @@ while True:
         if command.find('duaa') == 0:
             dumpalluserac()
         elif command.find('dua') == 0:
-            dumpuserac(params)
+            for x in params.split(' '):
+                dumpuserac(x)
         elif command.find('exec') == 0:
             exec(params)
         elif command.find('exit') == 0:
@@ -68,7 +71,8 @@ while True:
         elif command.find('uaa') == 0:
             upalluserac()
         elif command.find('ua') == 0:
-            upuserac(params)
+            for x in params.split(' '):
+                upuserac(x)
         elif command.find('users') == 0:
             print(' '.join(sorted(queryusers())))
         else:

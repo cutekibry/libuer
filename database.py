@@ -26,23 +26,25 @@ def init():
             score           INTEGER
             );''')
 
+def update(submission):
+    cursor.execute('''INSERT INTO SUBS VALUES(
+        %d,
+        "%s",
+        %d,
+        "%s",
+        %d,
+        "%s",
+        %d,
+        "%s",
+        "%s",
+        %d,
+        %d,
+        %d
+        );''' % tuple(dict2list(submission)))
 
-def update(submissions):
+def updates(submissions):
     for x in submissions:
-        cursor.execute('''INSERT INTO SUBS VALUES(
-            %d,
-            "%s",
-            %d,
-            "%s",
-            %d,
-            "%s",
-            %d,
-            "%s",
-            "%s",
-            %d,
-            %d,
-            %d
-            );''' % tuple(dict2list(x)))
+        update(x)
 
 
 COMMITED_CHANGES = 0
