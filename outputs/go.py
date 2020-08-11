@@ -10,7 +10,7 @@ def getdata(file):
     reader = csv.reader(f)
     data = []
     for row in list(reader)[1:]:
-        data.append([row[1], row[2], row[9], row[10]])
+        data.append([int(row[1]), row[2], row[9], row[10]])
     return data
 
 
