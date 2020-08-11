@@ -77,6 +77,3 @@ def queryitem(x):
         else:
             raise TypeError('Unknown Type %s' % str(type(v)))
     return query(params)
-
-# TODO: iot, https://loj.ac/submissions?submitter=iot&status=Accepted&currPageTop=583499&currPageBottom=568375&page=1
-# params += '%s=%d' % (k, v), v is NoneType
