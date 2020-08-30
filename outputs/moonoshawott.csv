@@ -1,4 +1,22 @@
 提交编号,题目编号,题目名称,状态,分数,总时间,内存,语言,代码长度,提交者,提交时间
+921025,575,「LibreOJ NOI Round #2」不等关系,Accepted,100,2804 ms,4.75 M,C++,3.3 K,moonoshawott,2020-08-29 14:31:14
+918866,2126,「HAOI2015」数组游戏,Accepted,100,1085 ms,636 K,C++,1.1 K,moonoshawott,2020-08-26 19:06:29
+918518,2553,「CTSC2018」暴力写挂,Accepted,100,9238 ms,324.25 M,C++,3.6 K,moonoshawott,2020-08-26 11:49:21
+918358,2210,「HNOI2014」江南乐,Accepted,100,15090 ms,508 K,C++,899 B,moonoshawott,2020-08-26 07:39:45
+918132,2326,「清华集训 2017」简单数据结构,Accepted,100,13386 ms,189.30 M,C++,2.3 K,moonoshawott,2020-08-25 18:13:43
+917636,2664,「NOI2013」向量内积,Accepted,100,3184 ms,42.50 M,C++,2.0 K,moonoshawott,2020-08-25 06:53:42
+917460,2257,「SNOI2017」遗失的答案,Accepted,100,856 ms,380 K,C++,1.7 K,moonoshawott,2020-08-24 21:12:42
+917372,2249,「NOI2014」购票,Accepted,100,8693 ms,130.34 M,C++,3.2 K,moonoshawott,2020-08-24 19:58:32
+916233,2090,「ZJOI2016」旅行者,Accepted,100,6507 ms,3.47 M,C++,3.5 K,moonoshawott,2020-08-23 18:37:00
+915932,2091,「ZJOI2016」小星星,Accepted,100,1510 ms,124 K,C++,1.4 K,moonoshawott,2020-08-23 13:08:58
+912254,3340,「NOI2020」命运,Accepted,100,5683 ms,252.37 M,C++ 11 (NOI),4.9 K,moonoshawott,2020-08-20 18:24:27
+909980,3339,「NOI2020」美食家,Accepted,100,3730 ms,20.92 M,C++,2.3 K,moonoshawott,2020-08-18 22:23:13
+908111,2242,「CQOI2014」通配符匹配,Accepted,100,893 ms,1.37 M,C++,2.3 K,moonoshawott,2020-08-17 16:37:09
+907685,2046,「CQOI2016」路由表,Accepted,100,2451 ms,10.83 M,C++,1.8 K,moonoshawott,2020-08-17 11:06:31
+903751,2226,「AHOI2014」支线剧情,Accepted,100,63 ms,380 K,C++,3.1 K,moonoshawott,2020-08-13 21:13:25
+902609,2042,「CQOI2016」不同的最小割,Accepted,100,2276 ms,636 K,C++,2.7 K,moonoshawott,2020-08-12 21:20:27
+901930,2078,「JSOI2016」无界单词,Accepted,100,13 ms,124 K,C++,1.7 K,moonoshawott,2020-08-12 16:02:54
+900256,2072,「JSOI2016」独特的树叶,Accepted,100,367 ms,14.00 M,C++,4.8 K,moonoshawott,2020-08-11 14:19:24
 896564,3011,「JOI 2019 Final」画展,Accepted,100,1155 ms,1.33 M,C++,546 B,moonoshawott,2020-08-08 09:15:02
 896535,3010,「JOI 2019 Final」勇者比太郎,Accepted,100,1994 ms,77.62 M,C++,634 B,moonoshawott,2020-08-08 08:56:50
 896523,2763,「JOI 2013 Final」 现代豪宅,Accepted,100,5484 ms,48.87 M,C++,2.7 K,moonoshawott,2020-08-08 08:49:22
