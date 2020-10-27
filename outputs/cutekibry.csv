@@ -1,4 +1,52 @@
 提交编号,题目编号,题目名称,状态,分数,总时间,内存,语言,代码长度,提交者,提交时间
+963392,2111,「JLOI2015」战争调度,Accepted,100,253 ms,59.62 M,C++,1.7 K,cutekibry,2020-10-22 14:45:17
+963062,2449,「POI2010」交通 Teleportation,Accepted,100,953 ms,7.75 M,C++,1.7 K,cutekibry,2020-10-21 22:03:46
+963036,2137,「ZJOI2015」诸神眷顾的幻想乡,Accepted,100,622 ms,78.50 M,C++,2.0 K,cutekibry,2020-10-21 21:49:13
+960852,2426,「POI2010」工会 Guilds,Accepted,100,725 ms,16.49 M,C++,876 B,cutekibry,2020-10-19 21:36:55
+960727,2159,「POI2011 R1」收缩点 Plot,Accepted,100,40020 ms,9.37 M,C++,4.1 K,cutekibry,2020-10-19 19:53:03
+958109,2428,「POI2010」神圣的因数 Divine Divisor,Accepted,100,3962 ms,1.75 M,C++,3.9 K,cutekibry,2020-10-16 19:47:03
+957769,2703,「POI2012」仓库式商店 Warehouse Store,Accepted,100,550 ms,12.24 M,C++,2.1 K,cutekibry,2020-10-16 13:24:25
+957572,3171,「POI 2013」价目表 Price List,Accepted,100,2477 ms,26.68 M,C++,2.2 K,cutekibry,2020-10-16 07:54:08
+955286,2875,「JOISC 2014 Day1」拉面比较,Accepted,100,49 ms,192 K,C++,650 B,cutekibry,2020-10-13 21:27:51
+955040,3154,「JOI Open 2019」汇款,Accepted,100,2012 ms,15.37 M,C++,2.8 K,cutekibry,2020-10-13 20:23:33
+954864,2460,「POI2010」桥 Bridges,Accepted,100,113 ms,376 K,C++,3.6 K,cutekibry,2020-10-13 19:06:27
+953709,2455,「POI2010」最小化游戏 The Minima Game,Accepted,100,420 ms,4.00 M,C++,353 B,cutekibry,2020-10-12 16:41:22
+953537,3153,「JOI Open 2019」三级跳,Accepted,100,13505 ms,35.03 M,C++,3.6 K,cutekibry,2020-10-12 13:30:28
+953319,2405,「THUPC 2017」玩游戏 / Game,Accepted,100,18 ms,260 K,C++,380 B,cutekibry,2020-10-12 07:52:33
+951945,2742,「JOI Open 2016」销售基因链,Accepted,100,770 ms,87.61 M,C++,2.2 K,cutekibry,2020-10-09 17:04:35
+951905,2688,「POI2015」洗车 Car washes,Accepted,100,1694 ms,97.75 M,C++,2.3 K,cutekibry,2020-10-09 16:29:57
+951484,2725,「JOI 2015 Final」分蛋糕 2,Accepted,100,420 ms,61.70 M,C++,936 B,cutekibry,2020-10-08 21:50:10
+951480,2726,「JOI 2015 Final」JOI 公园,Accepted,100,1201 ms,19.99 M,C++,1.7 K,cutekibry,2020-10-08 21:42:10
+951460,2349,「JOI 2018 Final」团子制作,Accepted,100,1254 ms,17.48 M,C++,1.1 K,cutekibry,2020-10-08 21:33:30
+951293,2334,「JOI 2017 Final」JOIOI 王国,Accepted,100,16048 ms,85.00 M,C++,3.0 K,cutekibry,2020-10-08 19:36:02
+950470,3119,「CTS2019 | CTSC2019」随机立方体,Accepted,100,1950 ms,57.00 M,C++,1.8 K,cutekibry,2020-10-07 21:02:25
+950324,504,「LibreOJ β Round」ZQC 的手办,Accepted,100,1933 ms,8.69 M,C++,4.2 K,cutekibry,2020-10-07 19:43:50
+948117,516,「LibreOJ β Round #2」DP 一般看规律,Accepted,100,2692 ms,37.45 M,C++,1.8 K,cutekibry,2020-10-06 13:53:08
+944127,2344,「JOI 2016 Final」铁路票价,Accepted,100,1562 ms,10.80 M,C++,1.5 K,cutekibry,2020-10-01 17:06:30
+942999,2342,「JOI 2016 Final」橙子装箱,Accepted,100,496 ms,380 K,C++,612 B,cutekibry,2020-09-29 20:28:02
+942991,2343,「JOI 2016 Final」集邮比赛 2,Accepted,100,92 ms,4.75 M,C++,1.0 K,cutekibry,2020-09-29 20:19:10
+942929,2351,「JOI 2018 Final」毒蛇越狱,Accepted,100,18640 ms,10.36 M,C++,1.5 K,cutekibry,2020-09-29 19:11:14
+942658,2347,「JOI 2018 Final」寒冬暖炉,Accepted,100,164 ms,892 K,C++,419 B,cutekibry,2020-09-29 13:38:41
+942653,2350,「JOI 2018 Final」月票购买,Accepted,100,10250 ms,30.65 M,C++,2.2 K,cutekibry,2020-09-29 13:32:43
+942642,2348,「JOI 2018 Final」美术展览,Accepted,100,1894 ms,7.75 M,C++,580 B,cutekibry,2020-09-29 12:44:05
+940898,2155,「POI2011 R1」同谋者 Conspiracy,Accepted,100,3876 ms,16.00 M,C++,3.1 K,cutekibry,2020-09-26 13:58:47
+940860,3144,「APIO2019」奇怪装置,Accepted,100,7598 ms,30.79 M,C++,1.5 K,cutekibry,2020-09-26 13:27:05
+940414,2494,「AHOI / HNOI2018」寻宝游戏,Accepted,100,465 ms,87.87 M,C++,1.8 K,cutekibry,2020-09-25 20:29:10
+940087,3030,「JOISC 2019 Day1」考试,Accepted,100,7819 ms,5.16 M,C++,1.5 K,cutekibry,2020-09-25 13:32:04
+937141,3046,「ZJOI2019」语言,Accepted,100,2575 ms,93.64 M,C++,3.7 K,cutekibry,2020-09-21 17:24:22
+936929,6038,「雅礼集训 2017 Day5」远行,Accepted,100,2217 ms,9.54 M,C++,2.5 K,cutekibry,2020-09-21 12:43:46
+936790,3086,「GXOI / GZOI2019」逼死强迫症,Accepted,100,21 ms,124 K,C++,1.5 K,cutekibry,2020-09-20 22:09:01
+936757,2477,「九省联考 2018」劈配,Accepted,100,778 ms,500 K,C++,3.1 K,cutekibry,2020-09-20 21:20:11
+936741,10062,「一本通 2.4 练习 5」病毒,Accepted,100,35 ms,764 K,C++,1.6 K,cutekibry,2020-09-20 20:53:40
+932541,3302,「联合省选 2020 A | B」信号传递,Accepted,100,5518 ms,40.12 M,C++,1.2 K,cutekibry,2020-09-15 13:55:14
+931826,150,挑战多项式,Accepted,100,23212 ms,16.61 M,C++,7.7 K,cutekibry,2020-09-14 09:26:03
+931525,10064,「一本通 3.1 例 1」黑暗城堡,Accepted,100,124 ms,7.87 M,C++,1.4 K,cutekibry,2020-09-13 16:16:42
+931350,10130,「一本通 4.4 例 1」点的距离,Accepted,100,185 ms,16.57 M,C++,1.4 K,cutekibry,2020-09-13 11:22:29
+931344,10049,「一本通 2.3 例 1」Phone List,Accepted,100,23 ms,4.52 M,C++,992 B,cutekibry,2020-09-13 11:12:53
+926890,3212,「CSP-S 2019」划分,Accepted,100,2006 ms,868.25 M,C++,2.4 K,cutekibry,2020-09-07 13:49:30
+924125,2607,「NOIP2012」疫情控制,Accepted,100,5641 ms,21.25 M,C++,2.5 K,cutekibry,2020-09-03 19:38:01
+923862,540,「LibreOJ NOIP Round #1」游戏,Accepted,100,33 ms,304 K,C++,644 B,cutekibry,2020-09-03 10:27:42
+923854,2425,「NOIP2015」运输计划,Accepted,100,1946 ms,47.25 M,C++,2.1 K,cutekibry,2020-09-03 10:10:47
 899694,3013,「JOI 2019 Final」硬币收藏,Accepted,100,1378 ms,892 K,C++,1.0 K,cutekibry,2020-08-10 22:31:44
 893320,2402,「THUPC 2017」天天爱射击 / Shooting,Accepted,100,7595 ms,51.24 M,C++,1.5 K,cutekibry,2020-08-06 09:39:44
 892155,3304,「联合省选 2020 A」作业题,Accepted,100,6371 ms,1008 K,C++,3.1 K,cutekibry,2020-08-05 09:40:11
